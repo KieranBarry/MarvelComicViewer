@@ -9,8 +9,9 @@ import Foundation
 
 /// A class to store all constants associated with this project
 final class Constants {
-    static let comicId = 52646 // 52646 - normal, 15878 - long description, 96089 - no description, 5813 - no image
+    static let comicId = 52646 // 52646 - normal, 15878 - long description, 96089 - no description, 5813 - no image, desc, or authors
     static let networkErrorText = "Sorry, we are having trouble processing this request at this time."
+    static let numberOfDescriptionLinesToDisplay = 3
     
     /// A class to store all constants for the Marvel API associated with this project
     final class MarvelAPI {
@@ -29,7 +30,6 @@ final class Constants {
         case comicTitle = "Title of Comic"
         case comicIssueNumber = "Issue Number of Comic"
         case comicAuthors = "Creators of Comic"
-        case comicDescriptionHeader = "Description"
         case comicDescription = "Description of Comic"
         case comicImage = "Cover Image of Comic"
     }

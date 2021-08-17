@@ -17,10 +17,12 @@ final class Constants {
         static let baseEndpoint = "https://gateway.marvel.com:443/v1/public/"
         static let comicByIdEndpoint = baseEndpoint + "comics/"
         static let timeStamp = String(Date().timeIntervalSince1970)
+        static let privateKey = MarvelAPIKeys.privateKey
+        static let publicKey = MarvelAPIKeys.publicKey
         static var hash: String {
             "\(timeStamp)\(MarvelAPIKeys.privateKey)\(MarvelAPIKeys.publicKey)".MD5HashedString()
         }
-        static let imageSize = "portrait_uncanny"
+        static let imageSize = "detail"
     }
     
     enum AccessibilityIdentifiers: String {

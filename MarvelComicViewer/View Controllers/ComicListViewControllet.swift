@@ -15,6 +15,9 @@ class ComicListViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+
+    
+    // MARK: UITableViewDataSource
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -39,6 +42,9 @@ class ComicListViewController: UITableViewController {
         return cell
     }
     
+    
+    // MARK: Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.comicDetailSegue {
             if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
@@ -49,10 +55,15 @@ class ComicListViewController: UITableViewController {
         // TODO: pass along comic info
     }
     
+    
+    // MARK: Lifecycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAllComics()
     }
+    
+    
     
     // MARK: Network Requests
     

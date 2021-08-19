@@ -21,14 +21,14 @@ class MarvelAPIManager {
     // MARK: Public API
     
     /**
-     Launches fetch request for an individual comic's data and forwards result to the completion handler
+     Launches fetch request for a list of comic datd and forwards result to the completion handler
      - parameters:
-        - comicId: the comic's ID in the Marvel API
         - completionHandler: The completion handler to call when the request is complete
         - result: The response from the server that holds the fetched Comic object on success or an APIError on failure
      */
-    func fetchComic(matching comicId: Int, completionHandler: @escaping (_ result: Result<Comic, APIError>) -> Void) {
-        guard let url = generateMarvelAuthenticatedURL(for: Constants.MarvelAPI.baseEndpoint + "comics/\(comicId)") else {
+    func fetchComics(completionHandler: @escaping (_ result: Result<ComicList, APIError>) -> Void) {
+        // TODO: Refactor
+        guard let url = generateMarvelAuthenticatedURL(for: Constants.MarvelAPI.baseEndpoint + "comics") else {
             completionHandler(.failure(.invalidURL))
             return
         }
@@ -39,8 +39,8 @@ class MarvelAPIManager {
                 do {
                     let decoder = JSONDecoder()
 
-                    let comic = try decoder.decode(Comic.self, from: data)
-                    completionHandler(.success(comic))
+                    let comicList = try decoder.decode(ComicList.self, from: data)
+                    completionHandler(.success(comicList))
                 } catch {
                     completionHandler(.failure(.dataNotDecoded))
                 }

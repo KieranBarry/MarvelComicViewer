@@ -20,4 +20,9 @@ struct MarvelImagePath: Codable {
     private enum CodingKeys: String, CodingKey {
       case path, fileExtension = "extension"
     }
+    
+    init(path: String, fileExtension: String) {
+        self.path = path
+        self.fileExtension = fileExtension
+    }
 }

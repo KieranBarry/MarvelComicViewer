@@ -12,6 +12,8 @@ final class Constants {
     static let comicId = 52646 // 52646 - normal, 15878 - long description, 96089 - no description, 5813 - no image, desc, or authors
     static let networkErrorText = "Sorry, we are having trouble processing this request at this time."
     static let numberOfDescriptionLinesToDisplay = 3
+    static let comicDetailSegue = "toComicDetailSegue"
+    static let comicCellIdentifier = "ComicCell"
     
     /// A class to store all constants for the Marvel API associated with this project
     final class MarvelAPI {

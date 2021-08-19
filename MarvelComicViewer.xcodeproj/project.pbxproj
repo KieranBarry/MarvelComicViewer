@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8905A4EE26CB6C1600AEF3A8 /* UILabel+isTruncated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905A4ED26CB6C1600AEF3A8 /* UILabel+isTruncated.swift */; };
 		8905A4F026CB7F4300AEF3A8 /* MarvelAPIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D31B9826CB0C2E005DA18E /* MarvelAPIKeys.swift */; };
+		8905A4F226CECA7500AEF3A8 /* ComicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905A4F126CECA7500AEF3A8 /* ComicList.swift */; };
+		8905A4F426CECE9C00AEF3A8 /* ComicListViewControllet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905A4F326CECE9C00AEF3A8 /* ComicListViewControllet.swift */; };
 		8950361626C742BF00F4443D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8950361526C742BF00F4443D /* AppDelegate.swift */; };
 		8950361826C742BF00F4443D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8950361726C742BF00F4443D /* SceneDelegate.swift */; };
 		8950361D26C742BF00F4443D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8950361B26C742BF00F4443D /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		8905A4ED26CB6C1600AEF3A8 /* UILabel+isTruncated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+isTruncated.swift"; sourceTree = "<group>"; };
+		8905A4F126CECA7500AEF3A8 /* ComicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicList.swift; sourceTree = "<group>"; };
+		8905A4F326CECE9C00AEF3A8 /* ComicListViewControllet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicListViewControllet.swift; sourceTree = "<group>"; };
 		8950361226C742BF00F4443D /* MarvelComicViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelComicViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8950361526C742BF00F4443D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8950361726C742BF00F4443D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8905A4F526CECEA300AEF3A8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				89D31B9A26CB359E005DA18E /* ComicDetailViewController.swift */,
+				8905A4F326CECE9C00AEF3A8 /* ComicListViewControllet.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		8950360926C742BF00F4443D = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +135,7 @@
 		8950361426C742BF00F4443D /* MarvelComicViewer */ = {
 			isa = PBXGroup;
 			children = (
-				89D31B9A26CB359E005DA18E /* ComicDetailViewController.swift */,
+				8905A4F526CECEA300AEF3A8 /* View Controllers */,
 				8950361B26C742BF00F4443D /* Main.storyboard */,
 				8950364F26C76B8400F4443D /* Models */,
 				8950364626C7437700F4443D /* Networking */,
@@ -197,6 +210,7 @@
 			children = (
 				8950365026C76B9500F4443D /* Comic.swift */,
 				8986C6EB26C84BCC00202D19 /* MarvelImagePath.swift */,
+				8905A4F126CECA7500AEF3A8 /* ComicList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,6 +349,7 @@
 				8986C6EE26C8859600202D19 /* Array<String>+asOxfordComma.swift in Sources */,
 				8950365126C76B9500F4443D /* Comic.swift in Sources */,
 				89D31B9B26CB359E005DA18E /* ComicDetailViewController.swift in Sources */,
+				8905A4F426CECE9C00AEF3A8 /* ComicListViewControllet.swift in Sources */,
 				8950364826C743EF00F4443D /* MarvelAPIManager.swift in Sources */,
 				89D31B9926CB0C2E005DA18E /* MarvelAPIKeys.swift in Sources */,
 				8950364E26C765DB00F4443D /* String+MD5.swift in Sources */,
@@ -343,6 +358,7 @@
 				8986C6EC26C84BCC00202D19 /* MarvelImagePath.swift in Sources */,
 				8950361826C742BF00F4443D /* SceneDelegate.swift in Sources */,
 				8950365726C7817200F4443D /* APIError.swift in Sources */,
+				8905A4F226CECA7500AEF3A8 /* ComicList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
